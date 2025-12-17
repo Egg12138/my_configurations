@@ -1,0 +1,315 @@
+export MineruAPIPort=8238
+export MineruSglangPort=29998
+export MineruWebUIPort=7860
+
+#export GEMINI_API_KEY=AIzaSyBR-hnb4zZuThFjCtibcpioDJ1UViCx2g4
+# mine:
+export GEMINI_API_KEY=AIzaSyCpXiKl568tUMvFqlcTZKuk_5htoTzvhhw
+export GEMINI_BASE_URL="https://generativelanguage.googleapis.com/v1beta/openai/"
+export GEMINI_DEFAULT_MODEL=gemini-2.5-flash
+
+export DEEPSEEK_API_KEY="sk-699568e28bf540b98f5bba3ae70f4a21"
+export DEEPSEEK_BASE_URL="https://api.deepseek.com/v1"
+export DS_DEFAULT_MODEL=deepseek-chat
+
+export MINIMAX_BASE_URL="https://api.minimax.io/v1"
+export MINIMAX_DEFAULT_MODEL="MiniMax-M2"
+export MINIMAX_API_KEY=eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJHcm91cE5hbWUiOiJKdW56aGUgWGlhbyIsIlVzZXJOYW1lIjoiSnVuemhlIFhpYW8iLCJBY2NvdW50IjoiIiwiU3ViamVjdElEIjoiMTk4MzA1ODk3NDI2OTc3NTk3OSIsIlBob25lIjoiIiwiR3JvdXBJRCI6IjE5ODMwNTg5NzQyNjU1Nzc1NzkiLCJQYWdlTmFtZSI6IiIsIk1haWwiOiJ4b2x0cmFtYW5AZ21haWwuY29tIiwiQ3JlYXRlVGltZSI6IjIwMjUtMTAtMjggMTY6MTE6MjQiLCJUb2tlblR5cGUiOjEsImlzcyI6Im1pbmltYXgifQ.bN_y6uyHAOb9N1o-2S7ctYVswseFhSlzYREmP5oLobMfkg2s8dzVz-2wOATOdAFkFSchJ5NCwO5Dy0CDAA8d4zN0riIWLZ4gKlX1PylugH0eqeDBGpKUCAGJ9mxFz05ECF4xeqlNpSw57kzhtbQ3EfIlpNWiFS_ara04GHAByk-wBHxV9-WZjjDw0k5VOs5xWBNLTGg-dOgnZz14h3Lh1wHypY8eMayiCIuAd2OUSiRVn7B0ba5veV-L5mz7vX-j_M5b8sOSJYt0QIe3wmF-7fhGl2LsJsu3nawW14FfAt3G_JQxLuxX0fn2AoC5xKMFb57E1mDwhBHz-NW8v4Qi2g
+
+
+export OPENROUTER_API_KEY="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"
+export OPENROUTER_BASE_URL="https://openrouter.ai/api/v1"
+export OPENROUTER_FREE_MODELS="z-ai/glm-4.5-air:free qwen/qwen3-coder:free moonshotai/kimi-k2:free deepseek/deepseek-r1-0528:free x-ai/grok-4.1-fast:free"
+export OPENROUTER_CHEAP_MODELS="google/gemini-2.5-flash google/gemini-2.5-flash-lite"
+export OPENROUTER_DEFAULT="x-ai/grok-4.1-fast:free"
+
+# 19872772117: GLM4.6 Lite plan
+
+# 大号
+export GLM_API_KEY="9d97ea497b8c4cb9ae74f14aa85e914e.jXQfToPGCjqOb882"
+#export GLM_API_KEY="1d1ae3a19ccd4f7b8ecadcebe44f33ab.mpQ7a5iOXiEXkkk8"
+
+# 小号，4.5用完，4.5-Air还有九百万
+#export GLM_API_KEY="cbf6ee9d96ee436681171a9ca0f7a0a9.eLDEWMA3KOFuS67S"
+# 小小号,万亿GLM-4.5
+#export GLM_API_KEY="aa47c21439e54a9ca8e971a1a55f3a7b.JhGwDA9nvuNy0PPP"
+
+export GLM_BASE_URL="https://open.bigmodel.cn/api/paas/v4"
+export GLM_DEFAULT_MODEL=GLM-4.5-X
+export GLM_MODEL_LIST="GLM-4.5 GLM-4.5-Air GLM-4.5-X GLM-4.5-AirX GLM-4.5-Flash"
+
+#GLM API does not support model check, records some modelname here:
+# GLM-4.5 # strongest
+# GLM-4.5-Air # balence;
+# GLM-4.5-X # super fast; daily use
+# GLM-4.5-AirX # super fast air
+
+# ALI DASHSCOPE
+export ALI_BASE_URL="https://dashscope.aliyuncs.com/compatible-mode/v1"
+export ALI_API_KEY="sk-52ac3e16fd284ed3ba6523c3709aaa2f"
+export QWEN_DEFAULT_MODEL=qwen3-coder-plus
+
+# Moonshot KIMI 
+export MOONSHOT_API_KEY="sk-mFijFbcSG4OWowYFRmWFbJ0jK8kvx9r3rN2LwsO6F0IwmtGL"
+export MOONSHOT_BASE_URL="https://api.moonshot.cn/v1"
+export MOONSHOT_DEFAULT_MODEL=kimi-k2-0905-preview
+
+# Router API
+export BAISHAN_API_KEY="sk-EJd7S4xKbYveA1llE4A9D20a44984c48AbD4117eF416B2Fb"
+export BAISHAN_BASE_URL="https://api.edgefn.net/v1"
+export BAISHAN_DEFAULT_MODEL=Kimi-K2-Instruct
+export BAISHAN_MODEL_LIST="Qwen3-Coder-480B-A35B-Instruct
+Qwen3-235B-A22B-2507
+GLM-4.5
+DeepSeek-R1-Distill-Qwen-32B
+DeepSeek-V3
+Qwen3-Reranker-0.6B
+Qwen3-Reranker-8B
+DeepSeek-R1-0528
+Qwen3-32B-FP8
+Kimi-K2-Instruct"
+
+export OPENAI_API_KEY=$GLM_API_KEY
+export OPENAI_BASE_URL=$GLM_BASE_URL
+export OPENAI_MODEL=$GLM_DEFAULT_MODEL
+
+export LOCAL_KEY=""
+#export LOCAL_URL="http://198.18.0.1:1234/v1"
+export LOCAL_URL="http://172.29.112.1:1234/v1"
+export LOCAL_MODEL=qwen3-coder-30b-a3b-instruct
+
+api-deepseek() {
+    export OPENAI_API_KEY=$DEEPSEEK_API_KEY 
+    export OPENAI_BASE_URL=$DEEPSEEK_BASE_URL 
+    export OPENAI_MODEL=$DS_DEFAULT_MODEL
+    api-check
+}
+
+
+api-kimi() {
+    export OPENAI_API_KEY=$MOONSHOT_API_KEY 
+    export OPENAI_BASE_URL=$MOONSHOT_BASE_URL 
+    export OPENAI_MODEL=$MOONSHOT_DEFAULT_MODEL
+    api-check
+}
+
+api-glm() {
+    export OPENAI_API_KEY=$GLM_API_KEY 
+    export OPENAI_BASE_URL=$GLM_BASE_URL 
+    export OPENAI_MODEL=$GLM_DEFAULT_MODEL
+    export PREDEFINED_MODEL_LIST=$GLM_MODEL_LIST
+
+    api-check
+}
+
+api-qwen() {
+    export OPENAI_API_KEY=$ALI_API_KEY 
+    export OPENAI_BASE_URL=$ALI_BASE_URL 
+    export OPENAI_MODEL=$QWEN_DEFAULT_MODEL
+    api-check
+}
+
+api-baishan() {
+    export OPENAI_API_KEY=$BAISHAN_API_KEY
+    export OPENAI_BASE_URL=$BAISHAN_BASE_URL 
+    export OPENAI_MODEL=$BAISHAN_DEFAULT_MODEL
+    export PREDEFINED_MODEL_LIST=$BAISHAN_MODEL_LIST
+
+    api-check
+
+}
+
+api-or() {
+    export OPENAI_API_KEY=$OPENROUTER_API_KEY
+    export OPENAI_BASE_URL=$OPENROUTER_BASE_URL
+    export OPENAI_MODEL=$OPENROUTER_DEFAULT
+    api-check
+}
+
+api-minimax() {
+    export OPENAI_API_KEY=$MINIMAX_API_KEY
+    export OPENAI_BASE_URL=$MINIMAX_BASE_URL    
+    export OPENAI_MODEL=$MINIMAX_DEFAULT_MODEL
+    api-check
+}
+
+export DEFAULT_LOCAL_MODE=qwen-qwen3-4b-thinking
+
+api-local() {
+    export OPENAI_API_KEY=$LOCAL_KEY
+    export OPENAI_BASE_URL=$LOCAL_URL 
+    export OPENAI_MODEL=$DEFAULT_LOCAL_MODE
+    export PREDEFINED_MODEL_LIST=$LOCAL_MODEL_LIST
+
+    api-check
+}
+
+api-gemini() {
+    export OPENAI_API_KEY=$GEMINI_API_KEY
+    export OPENAI_BASE_URL=$GEMINI_BASE_URL 
+    export OPENAI_MODEL=$GEMINI_DEFAULT_MODEL
+    api-check
+}
+
+api-check() {
+    echo "key = $OPENAI_API_KEY"
+    echo "URL = $OPENAI_BASE_URL"
+    echo "OPENAI_MODEL = $OPENAI_MODEL"
+}
+
+__api-check() {
+    #echo "key = $OPENAI_API_KEY"
+    echo "URL = $OPENAI_BASE_URL"
+    echo "OPENAI_MODEL = $OPENAI_MODEL"
+}
+
+
+print_list() {
+    models=$*
+    for m in $models; do
+        echo "$m"
+    done
+}
+
+
+# usage: api-XX && query_models | jq
+query-models() {
+    curl "$OPENAI_BASE_URL/models" -H "Authorization: Bearer $OPENAI_API_KEY"
+}
+
+api-models() {
+    filter=true
+    if ! command -v jq &> /dev/null; then
+        filter=false
+    fi
+
+    if grep -q -E "bigmodel" <(echo $OPENAI_BASE_URL); then
+        echo "Checking model list of special api is not supported, yet;"
+        print_list $PREDEFINED_MODEL_LIST
+    else
+        local json_data
+        #json_data=$(curl "$OPENAI_BASE_URL/models" -H "Authorization: Bearer $OPENAI_API_KEY")
+        json_data=$(query-models)
+        if [[ $filter=true ]]; then
+            print_list $(echo "$json_data" | jq -r '.data[] | .id')
+        else
+            echo $json_data
+        fi
+    fi
+}
+
+model() {
+    m=$1
+    if [[ -z "$m" ]]; then
+        echo "model is empty" >&2
+        return 2
+    else
+        export OPENAI_MODEL=$m
+        echo "MODEL_NAME -> $OPENAI_MODEL"
+        return 0
+    fi
+}
+
+api-clean() {
+    unset OPENAI_MODEL OPENAI_API_KEY OPENAI_BASE_URL
+    echo "cleaned"
+}
+
+mineru-server() {
+    mineru-api --host 0.0.0.0 --port $MineruAPIPort &
+
+}
+
+get-model-family() {
+# After we run api-XXX, $OPENAI_MODEL will be the url of llm provider
+# Parse llm family from $OPENAI_MODEL, all in lowercase
+# for example, "GLM-xxx" => "glm",  "Qwen3-*" => "qwen3", 
+    # After we run api-XXX, $OPENAI_MODEL will be the url of llm provider
+    # Parse llm family from $OPENAI_MODEL, all in lowercase
+    # for example, "GLM-xxx" => "glm",  "Qwen3-*" => "qwen3"
+
+    local model="$OPENAI_MODEL"
+
+    # Convert to lowercase for case-insensitive matching
+    local model_lower=$(echo "$model" | tr '[:upper:]' '[:lower:]')
+
+    # Check for model family patterns
+    if [[ "$model_lower" =~ ^gemini- ]]; then
+        echo "gemini"
+    elif [[ "$model_lower" =~ ^deepseek- ]]; then
+        echo "deepseek"
+    elif [[ "$model_lower" =~ ^glm- ]]; then
+        echo "glm"
+    elif [[ "$model_lower" =~ qwen3 ]]; then
+        echo "qwen3"
+    elif [[ "$model_lower" =~ kimi ]]; then
+        echo "kimi"
+    elif [[ "$model_lower" =~ qwen ]]; then
+        echo "qwen"
+    else
+        # If no pattern matches, return the first part of the model name (before any dash or slash)
+        echo "$model_lower" | sed -E 's/^([^/-]+).*/\1/'
+    fi
+}
+
+
+__clean_cc_env() {
+    unset ANTHROPIC_BASE_URL ANTHROPIC_AUTH_TOKEN ANTHROPIC_MODEL ANTHROPIC_FAST_MODEL
+    unset ANTHROPIC_DEFAULT_OPUS_MODEL AHTHROPIC_DEFAULT_SONNET_MODEL ANTHROPIC_DEFAULT_HAIKU_MODEL
+}
+
+cc-glm() {
+    __clean_cc_env
+    export ANTHROPIC_BASE_URL="https://open.bigmodel.cn/api/anthropic"
+    #  codeing plan apikey is special:
+    export ANTHROPIC_AUTH_TOKEN=4d21b2605bdc465a920434dae51d7fd2.XEYSebcMugVWj60g
+    export ANTHROPIC_DEFAULT_OPUS_MODEL=GLM-4.6
+    export ANTHROPIC_DEFAULT_SONNET_MODEL=GLM-4.6
+    export ANTHROPIC_DEFAULT_HAIKU_MODEL=GLM-4.5-Air
+    echo "ANTHROPIC_BASE_URL=$ANTHROPIC_BASE_URL, opus model = $ANTHROPIC_DEFAULT_OPUS_MODEL,  sonnet model = $ANTHROPIC_DEFAULT_SONNET_MODEL"
+}
+
+cc-deepseek() {
+    __clean_cc_env
+    export ANTHROPIC_BASE_URL="https://api.deepseek.com/anthropic"
+    export ANTHROPIC_AUTH_TOKEN=$DEEPSEEK_API_KEY
+    export ANTHROPIC_MODEL=deepseek-chat
+    export ANTHROPIC_SMALL_FAST_MODEL=deepseek-chat
+    echo "ANTHROPIC_BASE_URL=$ANTHROPIC_BASE_URL"
+}
+
+cc-kimi() {
+    __clean_cc_env
+    #export ANTHROPIC_BASE_URL="https://api.moonshot.cn/anthropic"
+    export ANTHROPIC_BASE_URL="https://api.kimi.com/coding"
+    # coding plan
+    export ANTHROPIC_AUTH_TOKEN=sk-kimi-9Vq66TsBrgH5OdE7H9ZLSycLUhASanfpE5EFt9TcUeQRdix0UGBZv30dgscZ0Kxc
+    export ANTHROPIC_MODEL=kimi-for-coding
+    export ANTHROPIC_SMALL_FAST_MODEL=kimi-for-coding
+    echo "ANTHROPIC_BASE_URL=$ANTHROPIC_BASE_URL"
+}
+
+cc-minimax() {
+    __clean_cc_env
+    export ANTHROPIC_BASE_URL=https://api.minimax.io/anthropic
+    export ANTHROPIC_API_KEY=$MINIMAX_API_KEY
+    export ANTHROPIC_MODEL=$MINIMAX_DEFAULT_MODEL
+    export ANTHROPIC_SMALL_FAST_MODEL=$MINIMAX_DEFAULT_MODEL
+    export ANTHROPIC_DEFAULT_SONNET_MODEL=$MINIMAX_DEFAULT_MODEL
+    export ANTHROPIC_DEFAULT_OPUS_MODEL=$MINIMAX_DEFAULT_MODEL
+    export ANTHROPIC_DEFAULT_HAIKU_MODEL=$MINIMAX_DEFAULT_MODEL
+}
+
+api-cc() {
+    local factory=$1
+    local claude_code_recommends="bigmodel moonshot"
+    __clean_cc_env
+    if [ ! -z "$factory" ]; then
+        echo "using $factory anthropic api for claude code"
+        cc-$factory
+    else
+        echo "using default for claude code"
+        cc-deepseek
+    fi
+}
+

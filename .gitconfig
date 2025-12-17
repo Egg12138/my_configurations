@@ -1,0 +1,29 @@
+[user]
+	name = egg12138
+	email = xoltraman@outlook.com
+[diff]
+  tool = icdiff
+[difftool]
+  prompt = false
+[difftool "icdiff"]
+  cmd = /usr/bin/icdiff --line-numbers $LOCAL $REMOTE
+[core]
+  editor = vim
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[alias]
+	br = branch
+	bra = branch -a
+    st = status
+    l = log --oneline
+    r = rebase -i
+    d = difftool
+    rv = remote -v
+    p = push
+#[http]
+#    proxy = http://172.29.112.1:7897
+#[https]
+#    proxy = http://172.29.112.1:7897
