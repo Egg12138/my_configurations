@@ -1,0 +1,98 @@
+// Zed keymap
+//
+// For information on binding keys, see the Zed
+// documentation: https://zed.dev/docs/key-bindings
+//
+// To see the default key bindings run `zed: open default keymap`
+// from the command palette.
+[
+  {
+    "context": "Workspace",
+    "bindings": {
+      "shift shift": "file_finder::Toggle",
+    },
+  },
+  {
+    "context": "Editor && vim_mode == normal",
+    "bindings": {
+      "shift-a": "vim::InsertAfter",
+      "a": "vim::InsertEndOfLine",
+      "g e": "vim::EndOfDocument",
+      "g g": "vim::StartOfDocument",
+      "space w": "workspace::Save",
+      "space s": "pane::SplitVertical",
+      // pane switcher is a loop list
+      "space n": "workspace::ActivateNextPane",
+      "space p": "workspace::ActivatePreviousPane",
+      "space q": "pane::CloseActiveItem",
+    },
+  },
+  {
+    "context": "Editor && vim_mode == insert && !AgentPanel",
+    "bindings": {
+      "j j": "vim::NormalBefore",
+      "j t": "vim::TemporaryNormal",
+      "j k": "vim::SwitchToNormalMode",
+    },
+  },
+  {
+    "context": "Editor && vim_mode == insert && vim_mode == normal",
+    "bindings": {
+      "ctrl-l": "vim::Comment",
+    },
+  },
+  {
+    "context": "!menu",
+    "bindings": {
+      "alt-e": "editor::ToggleFocus",
+    },
+  },
+  {
+    "context": "(MessageEditor && !Picker) > (Editor && !use_modifier_to_send)",
+    "bindings": {
+      "ctrl-enter": "agent::Chat",
+    },
+  },
+  {
+    "context": "(MessageEditor && !Picker) > (Editor && use_modifier_to_send)",
+    "bindings": {
+      "enter": "agent::Chat",
+    },
+  },
+  {
+    "context": "(MessageEditor && !Picker) > (Editor && use_modifier_to_send)",
+    "bindings": {
+      "ctrl-enter": null,
+    },
+  },
+  {
+    "context": "(MessageEditor && !Picker) > (Editor && !use_modifier_to_send)",
+    "bindings": {
+      "enter": null,
+    },
+  },
+  {
+    "context": "Editor",
+    "bindings": {
+      "ctrl-home": "editor::Copy",
+    },
+  },
+  {
+    "context": "Editor",
+    "bindings": {
+      "ctrl-insert": null,
+    },
+  },
+  {
+    "context": "Editor",
+    "bindings": {
+      "home": null,
+    },
+  },
+  {
+    "context": "Editor",
+    "bindings": {
+      "alt-`": "editor::FindAllReferences",
+    },
+  },
+]

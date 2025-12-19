@@ -1,0 +1,217 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run `zed: open default settings` from the
+// command palette (cmd-shift-p / ctrl-shift-p)
+{
+  "lsp_document_colors": "border",
+  "languages": {
+    "Python": {
+      "inlay_hints": {
+        "enabled": true,
+      },
+      "format_on_save": "on",
+      "formatter": {
+        "external": {
+          "command": "ruff",
+          "arguments": [
+            "check",
+            "--exit-zero",
+            "--stdin-filename",
+            "{buffer_path}",
+            "-",
+          ],
+        },
+      },
+    },
+  },
+  "context_servers": {
+    "mcp-server-markitdown": {
+      "enabled": true,
+      "settings": {
+        "package_version": "latest",
+      },
+    },
+  },
+  "wsl_connections": [
+    {
+      "distro_name": "wsl2-usbip",
+      "user": null,
+      "projects": [
+        {
+          "paths": ["/home/egg/source/containerd"],
+        },
+        {
+          "paths": ["/home/egg/source/urunc", "/home/egg/source/micran"],
+        },
+        {
+          "paths": ["/home/egg/source/xen"],
+        },
+      ],
+    },
+  ],
+  "icon_theme": "VSCode Great Icons Theme",
+  "language_models": {
+    "openai_compatible": {
+      "GLM": {
+        "api_url": "https://open.bigmodel.cn/api/paas/v4",
+        "available_models": [
+          {
+            "name": "GLM-4.5",
+            "display_name": null,
+            "max_tokens": 128000,
+            "max_output_tokens": 32000,
+            "max_completion_tokens": 200000,
+            "capabilities": {
+              "tools": true,
+              "images": false,
+              "parallel_tool_calls": true,
+              "prompt_cache_key": true,
+            },
+          },
+          {
+            "name": "GLM-4.5-Air",
+            "display_name": null,
+            "max_tokens": 128000,
+            "max_output_tokens": 32000,
+            "max_completion_tokens": 200000,
+            "capabilities": {
+              "tools": true,
+              "images": false,
+              "parallel_tool_calls": false,
+              "prompt_cache_key": false,
+            },
+          },
+          {
+            "name": "GLM-4.5-X",
+            "display_name": null,
+            "max_tokens": 200000,
+            "max_output_tokens": 32000,
+            "max_completion_tokens": 200000,
+            "capabilities": {
+              "tools": true,
+              "images": false,
+              "parallel_tool_calls": false,
+              "prompt_cache_key": false,
+            },
+          },
+          {
+            "name": "GLM-4.5-V",
+            "display_name": null,
+            "max_tokens": 200000,
+            "max_output_tokens": 32000,
+            "max_completion_tokens": 200000,
+            "capabilities": {
+              "tools": true,
+              "images": true,
+              "parallel_tool_calls": false,
+              "prompt_cache_key": false,
+            },
+          },
+          {
+            "name": "GLM-4.5-Flash",
+            "display_name": null,
+            "max_tokens": 200000,
+            "max_output_tokens": 32000,
+            "max_completion_tokens": 200000,
+            "capabilities": {
+              "tools": true,
+              "images": false,
+              "parallel_tool_calls": false,
+              "prompt_cache_key": false,
+            },
+          },
+        ],
+      },
+    },
+  },
+  "agent": {
+    "always_allow_tool_actions": true,
+    "default_model": {
+      "provider": "deepseek",
+      "model": "deepseek-chat",
+    },
+    "model_parameters": [],
+  },
+  "inlay_hints": {
+    "enabled": true,
+    "show_value_hints": true,
+    "show_type_hints": true,
+    "show_parameter_hints": true,
+    "show_other_hints": true,
+    "show_background": false,
+    "edit_debounce_ms": 700,
+    "scroll_debounce_ms": 50,
+    "toggle_on_modifiers_press": {
+      "control": false,
+      "alt": false,
+      "shift": false,
+      "platform": false,
+      "function": false,
+    },
+  },
+  "buffer_font_family": "Fira Code",
+  "buffer_font_features": {
+    "calt": true,
+    "liga": true,
+    "sups": true,
+  },
+  "ui_font_family": "Fira Code Retina",
+  "project_panel": {
+    "auto_reveal_entries": false,
+  },
+  "file_types": {
+    "c": ["*.c"],
+  },
+  "soft_wrap": "none",
+  "tab_size": 2,
+  "base_keymap": "VSCode",
+  "git": {
+    "inline_blame": {
+      "enabled": true,
+      "delay_ms": 0,
+      "padding": 7,
+      "min_column": 0,
+      "show_commit_summary": true,
+    },
+  },
+  "gutter": {
+    "line_numbers": true,
+  },
+  "minimap": {
+    "show": "never",
+  },
+  "current_line_highlight": "line",
+  "cursor_shape": "bar",
+  "cursor_blink": true,
+  "ui_font_size": 16,
+  "buffer_font_size": 26.0,
+  "theme": {
+    "mode": "system",
+    "light": "Gruvbox Light",
+    "dark": "Gruvbox Dark",
+  },
+
+  "lsp": {
+    "gopls": {
+      "initialization_options": {
+        "hints": {
+          "assignVariableTypes": true,
+          "compositeLiteralFields": true,
+          "compositeLiteralTypes": true,
+          "constantValues": true,
+          "functionTypeParameters": true,
+          "parameterNames": true,
+          "rangeVariableTypes": true,
+        },
+      },
+    },
+  },
+
+  // vims:
+  "vim_mode": true,
+  "relative_line_numbers": "enabled",
+}
