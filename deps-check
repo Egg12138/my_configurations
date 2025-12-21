@@ -1,0 +1,91 @@
+#!/bin/bash
+set -eu
+
+usage() {
+    cat <<'EOF'
+Usage: script [-h] [-q] [-p PACKAGE] [PACKAGE...]
+
+Show dependencies of dpkg packages.
+
+Options:
+  -h            Show this help and exit
+  -p PACKAGE    Specify a package (can be repeated)
+  -q            Quiet mode (only show package names)
+
+Examples:
+  deps-check docker-ce coreutils
+  deps-check -p docker-ce -p coreutils
+  deps-check -q docker-ce
+EOF
+}
+
+main() {
+    local PACKAGE=$1
+    local NO_VER=$2
+
+    if ! apt-cache show "$PACKAGE" > /dev/null 2>&1; then
+        echo "Warning: package '$PACKAGE' not found in apt cache" >&2
+        return
+    fi
+
+    echo ""
+    echo "$PACKAGE depends on:"
+    apt-cache depends "$PACKAGE" |
+        awk '/Depends:/ {print $2}' |
+        nl |
+        while read -r num dep; do
+          if [ "$NO_VER" -eq 1 ]; then
+            echo "$dep"
+          else
+            version=$(dpkg -l "$dep" 2>/dev/null | awk '/^ii/ {print $3}')
+            [ -n "$version" ] || version="not installed"
+            echo "$num. $dep => {version=$version}"
+            fi
+        done
+    echo ""
+}
+
+QUIET=0
+PACKAGES=()
+PKG=""
+
+while getopts ":hqp:" opt; do
+    case "$opt" in
+        h)
+            usage
+            exit 0
+            ;;
+        q)
+            QUIET=1
+            ;;
+        p)
+            PACKAGES+=($OPTARG)
+            ;;
+        :)
+            echo "Error: option -$OPTARG requires an argument" >&2
+            exit 2
+            ;;
+        \?)
+            echo "Error: invalid option -$OPTARG" >&2
+            exit 2
+            ;;
+    esac
+done
+
+shift $((OPTIND - 1))
+
+# positional fallback
+# add all remainning arguments to packages list to check
+if [ $# -gt 0 ]; then
+  PACKAGES+=("$@")
+fi
+
+if [ ${#PACKAGES[@]} -eq 0 ]; then
+    echo "No packages specified" >&2
+    usage >&2
+    exit 2
+fi
+
+for PACKAGE in "${PACKAGES[@]}"; do
+    main "$PACKAGE" "$QUIET"
+done
